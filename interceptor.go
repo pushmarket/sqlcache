@@ -7,8 +7,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/hellodword/sqlcache/cache"
 	"github.com/ngrok/sqlmw"
-	"github.com/prashanthpai/sqlcache/cache"
 )
 
 // Config is the configuration passed to NewInterceptor for creating new

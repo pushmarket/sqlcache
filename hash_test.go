@@ -3,13 +3,9 @@ package sqlcache
 import (
 	"database/sql/driver"
 	"testing"
-
-	"github.com/stretchr/testify/require"
 )
 
 func TestNoopHash(t *testing.T) {
-	assert := require.New(t)
-
 	tcs := []struct {
 		query    string
 		args     []driver.NamedValue
@@ -33,7 +29,11 @@ func TestNoopHash(t *testing.T) {
 
 	for _, tc := range tcs {
 		h, err := NoopHash(tc.query, tc.args)
-		assert.Nil(err)
-		assert.Equal(tc.expected, h)
+		if err != nil {
+			panic(err)
+		}
+		if tc.expected != h {
+			panic(h)
+		}
 	}
 }
