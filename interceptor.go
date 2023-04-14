@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/hellodword/sqlcache/cache"
+	"github.com/pushmarket/sqlcache/cache"
 	"github.com/ngrok/sqlmw"
 )
 

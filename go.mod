@@ -1,4 +1,4 @@
-module github.com/hellodword/sqlcache
+module github.com/pushmarket/sqlcache
 
 go 1.14
 

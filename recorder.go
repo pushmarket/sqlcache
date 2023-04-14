@@ -4,7 +4,7 @@ import (
 	"database/sql/driver"
 	"io"
 
-	"github.com/hellodword/sqlcache/cache"
+	"github.com/pushmarket/sqlcache/cache"
 )
 
 func newRowsRecorder(setter func(item *cache.Item), rows driver.Rows, maxRows int) *rowsRecorder {
